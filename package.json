@@ -1,0 +1,35 @@
+{
+  "name": "typescript-eslint-prettier-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate for a Node.js project with TypeScript, ESLint, Prettier",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/index.ts",
+    "dev:watch": "ts-node-dev --respawn --rs --transpile-only --ignore-watch node_modules src/index.ts",
+    "lint": "eslint --ext .js,.ts .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "20.3.0",
+    "@typescript-eslint/eslint-plugin": "5.59.9",
+    "@typescript-eslint/parser": "5.59.9",
+    "eslint": "8.42.0",
+    "eslint-config-prettier": "8.8.0",
+    "husky": "8.0.0",
+    "lint-staged": "13.2.2",
+    "prettier": "2.8.8",
+    "ts-node-dev": "2.0.0",
+    "typescript": ">=3.3.1 <5.1.0"
+  },
+  "lint-staged": {
+    "*.+(js|ts)": [
+      "npm run lint",
+      "npm run format"
+    ]
+  }
+}
