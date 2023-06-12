@@ -4,8 +4,9 @@
   "description": "A boilerplate for a Node.js project with TypeScript, ESLint, Prettier",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node dist/index.js",
-    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/index.ts",
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js",
+    "dev": "ts-node --transpileOnly src/index.ts",
     "dev:watch": "ts-node-dev --respawn --rs --transpile-only --ignore-watch node_modules src/index.ts",
     "lint": "eslint --ext .js,.ts .",
     "lint:fix": "eslint --fix .",
@@ -23,6 +24,7 @@
     "husky": "8.0.0",
     "lint-staged": "13.2.2",
     "prettier": "2.8.8",
+    "ts-node": "10.9.1",
     "ts-node-dev": "2.0.0",
     "typescript": ">=3.3.1 <5.1.0"
   },

@@ -11,12 +11,14 @@ The project structure is as follows:
 - `.prettierrc.json`: Prettier configuration file specifying code formatting rules.
 - `package.json`: NPM package configuration file containing project metadata and script commands.
 - `tsconfig.json`: TypeScript compiler configuration file defining compiler options and file inclusion/exclusion.
+- `types.d.ts`: Typescript custom types for your project.
 
 ## Available Scripts
 
 In the project directory, you can run the following scripts:
 
 - `npm start`: Transpiles TypeScript files using `tsc` and executes the compiled `dist/index.js` file using Node.js.
+- `npm run build`: Build your project with the default tsconfig.json.
 - `npm run dev`: Uses `ts-node-dev` to run the TypeScript files directly without compilation for development purposes.
 - `npm run dev:watch`: Similar to `npm run dev`, but automatically restarts the server on file changes.
 - `npm run lint`: Runs ESLint to check for linting issues in both JavaScript and TypeScript files.
