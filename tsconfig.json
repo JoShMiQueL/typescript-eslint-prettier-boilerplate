@@ -9,6 +9,6 @@
     "sourceMap": true,
     "lib": ["ES6", "DOM"]
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "types.d.ts"]
+  "include": ["src/**/*.ts", "types.d.ts"],
+  "exclude": ["node_modules"]
 }
